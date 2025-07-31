@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Asista AI Widget</title>
+
+  <!-- CSS for styling -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Optional: Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- Floating Chat Bubble -->
+  <div id="asista-bubble" title="Chat with Asista">💬</div>
+
+  <!-- Chat Widget -->
+  <div id="asista-widget" class="hidden">
+    <div id="asista-header">🤖 Asista</div>
+    
+    <div id="asista-chat-box">
+      <div class="asista-msg bot">
+        Hi! I'm <strong>Asista</strong> 👋<br>
+        How can I help your business today?
+      </div>
+    </div>
+
+    <div id="asista-input-container">
+      <input type="text" id="asista-input" placeholder="Type your message..." autocomplete="off" />
+      <button id="asista-send" aria-label="Send message">➤</button>
+    </div>
+  </div>
+
+  <!-- Chat Logic -->
+  <script src="widget.js"></script>
+</body>
+</html>
+
