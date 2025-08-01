@@ -1,0 +1,23 @@
+{
+  "businessName": "YOUR BUSINESS NAME HERE",
+  "industry": "YOUR INDUSTRY (e.g. Clothing, Electronics)",
+  "location": "YOUR CITY / COUNTRY",
+  "whatsapp": "YOUR WHATSAPP CONTACT",
+  "services": [
+    "List",
+    "Your",
+    "Top",
+    "Services"
+  ],
+  "workingHours": {
+    "mon-fri": "Enter your weekday hours",
+    "sat": "Saturday hours",
+    "sun": "Sunday hours"
+  },
+  "faq": {
+    "what are your working hours": "Type your opening hours here.",
+    "where are you located": "Type your location here.",
+    "what do you sell": "Describe your products here.",
+    "how do I contact you": "Put WhatsApp, phone, or email here."
+  }
+}

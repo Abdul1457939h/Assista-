@@ -1,0 +1,159 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Chat Bubble */
+#asista-bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: gold;
+  color: black;
+  font-size: 28px;
+  padding: 18px 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#asista-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat Widget */
+#asista-widget {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 360px;
+  max-height: 500px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show widget */
+#asista-widget:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Header */
+#asista-header {
+  background-color: gold;
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+/* Chat Box */
+#asista-chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #181818;
+}
+
+/* Messages */
+.asista-msg {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  line-height: 1.4;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.asista-msg.bot {
+  background-color: #333;
+  color: gold;
+  align-self: flex-start;
+}
+
+.asista-msg.user {
+  background-color: gold;
+  color: black;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Input Section */
+#asista-input-container {
+  display: flex;
+  border-top: 1px solid #222;
+  background-color: #111;
+  padding: 10px;
+}
+
+#asista-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: white;
+  outline: none;
+  margin-right: 8px;
+}
+
+#asista-send {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#asista-send:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Hide Class */
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  #asista-widget {
+    right: 10px;
+    bottom: 80px;
+    width: 90%;
+    max-height: 80vh;
+  }
+
+  #asista-bubble {
+    right: 15px;
+    bottom: 15px;
+    font-size: 22px;
+    padding: 14px;
+  }
+}
